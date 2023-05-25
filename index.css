@@ -1,0 +1,130 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.layered-image {
+    position: relative;
+}
+
+.layered-image img {
+    height: 300px;
+    width: 300px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 300px;
+    opacity: 1;
+    animation: pulse 10s linear infinite;
+}
+
+.image-base {
+    animation: rotation 10s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(360deg);
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+
+.centering {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.description {
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: rgb(163, 163, 163);
+}
+
+.contact {
+    font-weight: 100;
+    margin: 0;
+    color: rgb(208, 208, 208);
+}
+
+@media (max-device-width: 600px) {
+
+    .layered-image {
+        position: relative;
+    }
+
+    .layered-image img {
+        height: 700px;
+        width: 700px;
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 300px;
+        width: 300px;
+        opacity: 1;
+        animation: pulse 7s infinite;
+    }
+
+    .image-base {
+        animation: rotation 7s linear infinite;
+    }
+
+    .title {
+        font-size: 100px;
+        font-weight: 700;
+    }
+
+    .description {
+        margin-top: 40px;
+        font-size: 43px;
+    }
+
+    .contact {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+}
