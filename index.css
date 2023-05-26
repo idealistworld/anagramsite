@@ -67,7 +67,7 @@ body {
 }
 
 .title {
-    font-weight: 500;
+    font-weight: 800;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 30px;
@@ -76,6 +76,7 @@ body {
 
 .description {
     font-weight: 100;
+    margin-top: 8px;
     margin-bottom: 10px;
     color: rgb(163, 163, 163);
 }
