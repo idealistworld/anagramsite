@@ -71,6 +71,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 30px;
+    color: #404040;
 }
 
 .description {
@@ -111,7 +112,7 @@ body {
     }
 
     .description {
-        margin-top: 40px;
+        margin-top: 20px;
         font-size: 43px;
     }
 
