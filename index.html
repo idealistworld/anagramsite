@@ -2,58 +2,68 @@
 <link rel="icon" type="image/x-icon" href="favicon.jpg">
 
 <title>ANAGRAM</title>
+
 <head>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyD7weuPNyfJANyKSvAFa0DzPUSApgXu8XU",
-    authDomain: "anagram-85c84.firebaseapp.com",
-    projectId: "anagram-85c84",
-    storageBucket: "anagram-85c84.appspot.com",
-    messagingSenderId: "830252932535",
-    appId: "1:830252932535:web:8fcbc6ef61b452372d9c32",
-    measurementId: "G-FLS04TF9GZ"
-  };
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7weuPNyfJANyKSvAFa0DzPUSApgXu8XU",
+      authDomain: "anagram-85c84.firebaseapp.com",
+      projectId: "anagram-85c84",
+      storageBucket: "anagram-85c84.appspot.com",
+      messagingSenderId: "830252932535",
+      appId: "1:830252932535:web:8fcbc6ef61b452372d9c32",
+      measurementId: "G-FLS04TF9GZ"
+    };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS04TF9GZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS04TF9GZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-FLS04TF9GZ');
-</script>
+    gtag('config', 'G-FLS04TF9GZ');
+  </script>
 </head>
 
 <body>
-<div class="centering">
+  <div class="centering">
     <div class="center-content">
-        <div class="layered-image">
-            <img class="image-base" src="outer.png" alt="" />
-            <img class="image-overlay" src="inner.png" alt="" />
+      <div class="layered-image">
+        <img class="image-base" src="outer.png" alt="" />
+        <img class="image-overlay" src="inner.png" alt="" />
+      </div>
+      <h2 class="title">
+        ANAGRAM
+      </h2>
+      <p class="description" font-weight: 100;margin-bottom: 20px; color: rgb(163, 163, 163);>
+        Events. Spaces. People.
+      </p>
+
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <p class="contact">
+            <a href="./about/index.html">About Us</a>
+          </p>
+          <p class="contact">
+            <a href="https://anagram-nyc.breezy.hr/p/78f4f7ff7315-intern-at-anagram">Apply to Join</a>
+          </p>
         </div>
-        <h2 class="title">
-            ANAGRAM
-        </h2>
-        <p class="description" font-weight: 100;margin-bottom: 20px; color: rgb(163, 163, 163);>
-            Events. Spaces. People.
-        </p>
-        <p class="contact">
-            <a href = "https://anagram-nyc.breezy.hr/p/78f4f7ff7315-intern-at-anagram">Apply Now</a>
-        </p>
+      </div>
     </div>
-</div>
+  </div>
 </body>
