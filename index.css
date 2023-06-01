@@ -103,11 +103,11 @@ a:visited {
 
 .home-page {
     font-weight: 500;
-    color: #919191;
+    color: #343434;
 }
 
 .home-page:visited {
-    color: #919191;
+    color: #343434;
 }
 
 /* Dropdown Button */
@@ -209,7 +209,7 @@ a:visited {
 
     .home-page {
         font-weight: 500;
-        color: #404040;
+        color: #343434;
         font-size: 40px;
     }
 
