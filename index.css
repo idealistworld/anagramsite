@@ -209,12 +209,15 @@ a:visited {
 @media (max-device-width: 600px) {
 
     .centering {
-        width: 100vw;
+        width: 99.5vw;
+        margin-top: 200px;
+        margin-left: 0;
+        margin-right: 0;
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
         overflow-y: scroll;
+        overflow-x: hidden;
+        min-height: 100vh;
     }
 
     .dropbtn {
