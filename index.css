@@ -55,7 +55,6 @@
     margin-right: 0;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     overflow-x: hidden;
     min-height: 100vh;
     position: absolute;
@@ -218,7 +217,6 @@ a:visited {
         margin-right: 0;
         display: flex;
         flex-direction: column;
-        overflow-y: scroll;
         overflow-x: hidden;
         min-height: 100vh;
     }
