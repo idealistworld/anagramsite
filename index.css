@@ -56,7 +56,6 @@
     flex-direction: column;
     overflow-x: hidden;
     min-height: 100vh;
-    position: absolute;
 }
 
 body {
