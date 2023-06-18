@@ -189,44 +189,22 @@ a:visited {
 /* width */
 ::-webkit-scrollbar {
     width: 3px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #ffffff00;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
-
-  .paragraph-title {
-    font-weight: 500;
-    display: block;
-    font-size: 20px;
-    color: #404040;
-  }
-
-  .image-gallery {
-    width: 39.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    flex-wrap: wrap;
-  }
-
-  .vc-fund{
-    font-weight: 500;
-    color: #919191;
-    margin: 0px 10px;
-  }
+}
 
 @media (max-device-width: 600px) {
 
