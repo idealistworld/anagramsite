@@ -171,6 +171,12 @@ a:visited {
     text-align: center;
     width: 40vw;
     line-height: 200%;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #919191;
+    overflow-y: scroll;
+    height: 250px;
+    padding: 0 20px;
 }
 
 #contactInfo {
@@ -178,6 +184,26 @@ a:visited {
     font-weight: 100;
     font-size: 15px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 @media (max-device-width: 600px) {
 
@@ -221,6 +247,7 @@ a:visited {
     .written-paragraph {
         text-align: center;
         font-size: 35px;
+        height: 30vh;
         width: 75vw;
         line-height: 150%;
     }
