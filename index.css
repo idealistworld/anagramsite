@@ -176,7 +176,6 @@ a:visited {
     font-weight: 100;
     color: #919191;
     padding: 0 20px;
-    height: 120%;
 }
 
 #contactInfo {
@@ -259,7 +258,6 @@ a:visited {
     .written-paragraph {
         text-align: center;
         font-size: 35px;
-        height: 100%;
         width: 75vw;
         line-height: 150%;
     }
