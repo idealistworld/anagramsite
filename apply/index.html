@@ -1,0 +1,152 @@
+<link rel="stylesheet" href="../index.css">
+<link rel="icon" type="image/x-icon" href="../favicon.jpg">
+
+<style>
+  input {
+    color: #919191;
+    background-color: #40404000;
+    padding: 7px 8px;
+    font-size: 15px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    margin-top: 10px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
+  }
+
+  select {
+    color: #919191;
+    background-color: #40404000;
+    padding: 7px 8px;
+    font-size: 15px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    margin-top: 10px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
+    display: block;
+    width: 374px;
+  }
+
+  .application-form {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .submit-application {
+    margin-top: 30px;
+    color: #919191;
+    background-color: #40404000;
+    padding: 7px 60px;
+    display: block;
+    font-size: 15px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    font-weight: 100;
+    text-align: center;
+    display: block;
+  }
+
+  @media (max-device-width: 600px) {
+    input {
+    color: #919191;
+    background-color: #40404000;
+    padding: 25px 100px;
+    font-size: 40px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    font-weight: 100;
+    text-align: center;
+    margin: 20px;
+  }
+
+  select {
+    color: #919191;
+    background-color: #40404000;
+    padding: 25px 100px;
+    font-size: 40px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    margin-top: 10px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
+    display: block;
+    width: 630px;
+  }
+
+  .application-form {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .submit-application {
+    margin-top: 30px;
+    color: #919191;
+    background-color: #40404000;
+    padding: 25px 218px;
+    display: block;
+    font-size: 40px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    font-weight: 100;
+    text-align: center;
+    display: block;
+  }
+  }
+</style>
+
+<title>APPLY TO ANAGRAM</title>
+
+<body>
+  <div class="centering">
+    <div class="center-content">
+      <a href="../">
+        <div class="layered-image">
+          <img class="image-base" src="../outer.png" alt="" />
+          <img class="image-overlay" src="../inner.png" alt="" />
+        </div>
+      </a>
+      <h2 class="title">
+        APPLY TO ANAGRAM
+      </h2>
+      <p class="written-paragraph" style="height:100%">
+        Apply to join the Anagram community. Get access to exclusive events and access to our NYC co-working space.
+      <form class="application-form" method="POST"
+        action="https://script.google.com/macros/s/AKfycbyasQZCwQH9iWp5rIBdfVTqwSJiKiIi2q6fkfxQTuOTSiJZgvarfnp0gNZ3_xR0RWLn9w/exec">
+        <div>
+          <input name="Name" type="text" placeholder="Full Name" required>
+          <input name="Email" type="email" placeholder="Email Address" required>
+        </div>
+        <div>
+          <input name="Occupation" type="text" placeholder="Startup/University URL" required>
+          <input name="LinkedIn" type="text" placeholder="LinkedIn" required>
+        </div>
+        <select class="text-input selector-desktop" name="Referral" data-dashlane-rid="4981a59aaad2c972"
+          data-form-type="other">
+          <option value="none" selected="" disabled="" hidden="">How did you hear about us?</option>
+          <option value="WordOfMouth">Friend or Colleague</option>
+          <option value="Instagram">Instagram</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Discord">Discord</option>
+          <option value="Other">Other</option>
+        </select>
+        <button class="submit-application" type="submit">Submit Application</button>
+      </form>
+      <br>
+      <br>
+      </p>
+    </div>
+    <!--<p class="home-page">
+      <a href="../"> Back </a>
+    </p>-->
+  </div>
+</body>
