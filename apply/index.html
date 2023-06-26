@@ -125,14 +125,14 @@
       <form id="submission-form" class="application-form" method="POST" target="iframe"
         action="https://script.google.com/macros/s/AKfycbyasQZCwQH9iWp5rIBdfVTqwSJiKiIi2q6fkfxQTuOTSiJZgvarfnp0gNZ3_xR0RWLn9w/exec">
         <div>
-          <input name="Name" type="text" placeholder="Full Name" required>
-          <input name="Email" type="email" placeholder="Email Address" required>
+          <input id="name-input" name="Name" type="text" placeholder="Full Name" required>
+          <input id="email-input" name="Email" type="email" placeholder="Email Address" required>
         </div>
         <div>
-          <input name="Occupation" type="text" placeholder="Startup/University URL" required>
-          <input name="LinkedIn" type="text" placeholder="LinkedIn" required>
+          <input id="occupation-input" name="Occupation" type="text" placeholder="Startup/University URL" required>
+          <input id="linkedin-input" name="LinkedIn" type="text" placeholder="LinkedIn" required>
         </div>
-        <select class="text-input selector-desktop" name="Referral" data-dashlane-rid="4981a59aaad2c972"
+        <select id="Referral" class="text-input selector-desktop" name="Referral" data-dashlane-rid="4981a59aaad2c972"
           data-form-type="other">
           <option value="none" selected="" disabled="" hidden="">How did you hear about us?</option>
           <option value="WordOfMouth">Friend or Colleague</option>
@@ -157,10 +157,13 @@
 
 <script>
   function applicationsubmitted() {
-    document.getElementById("written-paragraph").innerHTML = "We will reach back out with our decision soon.<br>In the meantime, stay updated with Anagram by joining our <a href = 'https://discord.gg/kw3tKh3qcV' style = 'color: #919191; text-decoration: underline'>Discord here.</a>"
-    document.getElementById("submission-form").style.display = "none"
-    document.getElementById("apply-title").innerHTML = "APPLICATION SUBMITTED"
-
+    var ddl = document.getElementById("Referral");
+    var selectedValue = ddl.options[ddl.selectedIndex].value;
+    if (document.getElementById("name-input").value != "" && document.getElementById("email-input").value != "" && document.getElementById("occupation-input").value != "" && document.getElementById("linkedin-input").value != "" && selectedValue != "none") {
+      document.getElementById("written-paragraph").innerHTML = "We will reach back out with our decision soon.<br>In the meantime, stay updated with Anagram by joining our <a href = 'https://discord.gg/kw3tKh3qcV' style = 'color: #919191; text-decoration: underline'>Discord here.</a>"
+      document.getElementById("submission-form").style.display = "none"
+      document.getElementById("apply-title").innerHTML = "APPLICATION SUBMITTED"
+    }
   }
   window.onload = document.getElementById("submit-application-button").addEventListener("click", applicationsubmitted);
 </script>
