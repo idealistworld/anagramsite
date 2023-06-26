@@ -54,55 +54,57 @@
 
   @media (max-device-width: 600px) {
     input {
-    color: #919191;
-    background-color: #40404000;
-    padding: 25px 100px;
-    font-size: 40px;
-    border: none;
-    outline: 1px solid rgb(208, 208, 208);
-    font-weight: 100;
-    text-align: center;
-    margin: 20px;
-  }
+      color: #919191;
+      background-color: #40404000;
+      padding: 25px 100px;
+      font-size: 40px;
+      border: none;
+      outline: 1px solid rgb(208, 208, 208);
+      font-weight: 100;
+      text-align: center;
+      margin: 20px;
+    }
 
-  select {
-    color: #919191;
-    background-color: #40404000;
-    padding: 25px 100px;
-    font-size: 40px;
-    border: none;
-    outline: 1px solid rgb(208, 208, 208);
-    margin-top: 10px;
-    font-weight: 100;
-    text-align: center;
-    margin: 10px;
-    display: block;
-    width: 630px;
-  }
+    select {
+      color: #919191;
+      background-color: #40404000;
+      padding: 25px 100px;
+      font-size: 40px;
+      border: none;
+      outline: 1px solid rgb(208, 208, 208);
+      margin-top: 10px;
+      font-weight: 100;
+      text-align: center;
+      margin: 10px;
+      display: block;
+      width: 630px;
+    }
 
-  .application-form {
-    width: 40vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    .application-form {
+      width: 40vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-  .submit-application {
-    margin-top: 30px;
-    color: #919191;
-    background-color: #40404000;
-    padding: 25px 218px;
-    display: block;
-    font-size: 40px;
-    border: none;
-    outline: 1px solid rgb(208, 208, 208);
-    font-weight: 100;
-    text-align: center;
-    display: block;
-  }
+    .submit-application {
+      margin-top: 30px;
+      color: #919191;
+      background-color: #40404000;
+      padding: 25px 218px;
+      display: block;
+      font-size: 40px;
+      border: none;
+      outline: 1px solid rgb(208, 208, 208);
+      font-weight: 100;
+      text-align: center;
+      display: block;
+    }
   }
 </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSN1YB1WZQ"></script>
 
 <title>APPLY TO ANAGRAM</title>
 
@@ -115,12 +117,12 @@
           <img class="image-overlay" src="../inner.png" alt="" />
         </div>
       </a>
-      <h2 class="title">
+      <h2 id="apply-title" class="title">
         APPLY TO ANAGRAM
       </h2>
-      <p class="written-paragraph" style="height:100%">
+      <p id="written-paragraph" class="written-paragraph" style="height:100%">
         Apply to join the Anagram community. Get access to exclusive events and access to our NYC co-working space.
-      <form class="application-form" method="POST"
+      <form id="submission-form" class="application-form" method="POST" target="iframe"
         action="https://script.google.com/macros/s/AKfycbyasQZCwQH9iWp5rIBdfVTqwSJiKiIi2q6fkfxQTuOTSiJZgvarfnp0gNZ3_xR0RWLn9w/exec">
         <div>
           <input name="Name" type="text" placeholder="Full Name" required>
@@ -139,8 +141,10 @@
           <option value="Discord">Discord</option>
           <option value="Other">Other</option>
         </select>
-        <button class="submit-application" type="submit">Submit Application</button>
+        <button id="submit-application-button" class="submit-application" type="submit">Submit Application</button>
       </form>
+      <iframe name="iframe" style="position: absolute; visibility: hidden"></iframe>
+
       <br>
       <br>
       </p>
@@ -150,3 +154,13 @@
     </p>-->
   </div>
 </body>
+
+<script>
+  function applicationsubmitted() {
+    document.getElementById("written-paragraph").innerHTML = "We will reach back out with our decision soon.<br>In the meantime, stay updated with Anagram by joining our <a href = 'https://discord.gg/kw3tKh3qcV' style = 'color: #919191; text-decoration: underline'>Discord here.</a>"
+    document.getElementById("submission-form").style.display = "none"
+    document.getElementById("apply-title").innerHTML = "APPLICATION SUBMITTED"
+
+  }
+  window.onload = document.getElementById("submit-application-button").addEventListener("click", applicationsubmitted);
+</script>
