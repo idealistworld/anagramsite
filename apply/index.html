@@ -129,7 +129,7 @@
           <input id="email-input" name="Email" type="email" placeholder="Email Address" required>
         </div>
         <div>
-          <input id="occupation-input" name="Occupation" type="text" placeholder="Startup/University URL" required>
+          <input id="occupation-input" name="Occupation" type="text" placeholder="Company/University" required>
           <input id="linkedin-input" name="LinkedIn" type="text" placeholder="LinkedIn" required>
         </div>
         <select id="Referral" class="text-input selector-desktop" name="Referral" data-dashlane-rid="4981a59aaad2c972"
@@ -156,7 +156,6 @@
 </body>
 
 <script>
-
   function changePage() {
     document.getElementById("written-paragraph").innerHTML = "We will reach back out with our decision soon.<br>In the meantime, stay updated with Anagram by joining our <a href = 'https://discord.gg/kw3tKh3qcV' style = 'color: #919191; text-decoration: underline'>Discord here.</a>"
     document.getElementById("submission-form").style.display = "none"
@@ -168,6 +167,8 @@
     var selectedValue = ddl.options[ddl.selectedIndex].value;
     if (document.getElementById("name-input").value != "" && document.getElementById("email-input").value != "" && document.getElementById("occupation-input").value != "" && document.getElementById("linkedin-input").value != "" && selectedValue != "none") {
       document.getElementById("apply-title").innerHTML = "SUBMITTING..."
+      document.getElementById("submission-form").style.opacity = "0"
+      document.getElementById("written-paragraph").innerHTML = ""
       setTimeout(changePage, 3000)
     }
   }
