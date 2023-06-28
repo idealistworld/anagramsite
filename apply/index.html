@@ -22,7 +22,6 @@
     font-size: 15px;
     border: none;
     outline: 1px solid rgb(208, 208, 208);
-    margin-top: 10px;
     font-weight: 100;
     text-align: center;
     margin: 10px;
@@ -30,7 +29,7 @@
     width: 374px;
   }
 
-  .application-form {
+  #submission-form {
     width: 40vw;
     display: flex;
     align-items: center;
@@ -68,20 +67,19 @@
     select {
       color: #919191;
       background-color: #40404000;
-      padding: 25px 118px;
+      padding: 25px;
       font-size: 40px;
       border: none;
       outline: 1px solid rgb(208, 208, 208);
-      margin-top: 10px;
       font-weight: 100;
       text-align: center;
       margin: 10px;
       display: block;
-      width: 630px;
+      width: 100%;
     }
 
-    .application-form {
-      width: 40vw;
+    #submission-form {
+      width: 630px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,7 +90,7 @@
       margin-top: 30px;
       color: #ffffff;
       background-color: #404040;
-      padding: 25px 230px;
+      padding: 25px 210px;
       display: block;
       font-size: 40px;
       border: none;
@@ -132,8 +130,7 @@
           <input id="occupation-input" name="Occupation" type="text" placeholder="Company/University" required>
           <input id="linkedin-input" name="LinkedIn" type="text" placeholder="LinkedIn" required>
         </div>
-        <select id="Referral" class="text-input selector-desktop" name="Referral" data-dashlane-rid="4981a59aaad2c972"
-          data-form-type="other">
+        <select id="Referral" class="text-input selector-desktop" name="Referral" data-form-type="other">
           <option value="none" selected="" disabled="" hidden="">How'd you hear about us?</option>
           <option value="WordOfMouth">Word of Mouth</option>
           <option value="Instagram">Instagram</option>
@@ -141,10 +138,15 @@
           <option value="Discord">Slack</option>
           <option value="Other">Other</option>
         </select>
+        <select id="role-input" class="text-input selector-desktop" name="Role" data-form-type="other">
+          <option value="none" selected="" disabled="" hidden="">Primary Role</option>
+          <option value="Student">Student</option>
+          <option value="Founder">Founder</option>
+          <option value="Investor">Investor</option>
+        </select>
         <button id="submit-application-button" class="submit-application" type="submit">Submit Application</button>
       </form>
       <iframe name="iframe" style="position: absolute; visibility: hidden"></iframe>
-
       <br>
       <br>
       </p>
@@ -165,7 +167,9 @@
   function applicationsubmitted() {
     var ddl = document.getElementById("Referral");
     var selectedValue = ddl.options[ddl.selectedIndex].value;
-    if (document.getElementById("name-input").value != "" && document.getElementById("email-input").value != "" && document.getElementById("occupation-input").value != "" && document.getElementById("linkedin-input").value != "" && selectedValue != "none") {
+    var ddl1 = document.getElementById("role-input");
+    var selectedValue1 = ddl1.options[ddl1.selectedIndex].value;
+    if (document.getElementById("name-input").value != "" && document.getElementById("email-input").value != "" && document.getElementById("occupation-input").value != "" && document.getElementById("linkedin-input").value != "" && selectedValue != "none" && document.getElementById("linkedin-input").value != "" && selectedValue != "none" && selectedValue1 != "none") {
       document.getElementById("apply-title").innerHTML = "SUBMITTING..."
       document.getElementById("submission-form").style.opacity = "0"
       document.getElementById("written-paragraph").innerHTML = ""
