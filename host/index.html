@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="../index.css">
+<link rel="icon" type="image/x-icon" href="../favicon.jpg">
+
+<style>
+  input {
+    color: #919191;
+    background-color: #40404000;
+    padding: 7px 8px;
+    font-size: 15px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    margin-top: 10px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
+  }
+
+  select {
+    color: #919191;
+    background-color: #40404000;
+    padding: 7px 8px;
+    font-size: 15px;
+    border: none;
+    outline: 1px solid rgb(208, 208, 208);
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
+    display: block;
+    width: 374px;
+  }
+
+  #submission-form {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .submit-application {
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #404040;
+    padding: 7px 60px;
+    display: block;
+    font-size: 15px;
+    border: none;
+    outline: 0px solid rgb(208, 208, 208);
+    font-weight: 100;
+    text-align: center;
+    display: block;
+  }
+
+  @media (max-device-width: 600px) {
+    input {
+      color: #919191;
+      background-color: #40404000;
+      padding: 25px 100px;
+      font-size: 40px;
+      border: none;
+      outline: 1px solid rgb(208, 208, 208);
+      font-weight: 100;
+      text-align: center;
+      margin: 20px;
+    }
+
+    select {
+      color: #919191;
+      background-color: #40404000;
+      padding: 25px;
+      font-size: 40px;
+      border: none;
+      outline: 1px solid rgb(208, 208, 208);
+      font-weight: 100;
+      text-align: center;
+      margin: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    #submission-form {
+      width: 630px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .submit-application {
+      margin-top: 30px;
+      color: #ffffff;
+      background-color: #404040;
+      padding: 25px 210px;
+      display: block;
+      font-size: 40px;
+      border: none;
+      outline: 0px solid rgb(208, 208, 208);
+      font-weight: 100;
+      text-align: center;
+      display: block;
+    }
+  }
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSN1YB1WZQ"></script>
+
+<title>ANAGRAM MEETUPS</title>
+
+<body>
+  <div class="centering">
+    <div class="center-content">
+      <a href="../">
+        <div class="layered-image">
+          <img class="image-base" src="../outer.png" alt="" />
+          <img class="image-overlay" src="../inner.png" alt="" />
+        </div>
+      </a>
+      <h2 id="apply-title" class="title">
+        ANAGRAM MEETUPS
+        <br>
+        <span style ="font-weight: 100;">Get a Free Meetup Spot.</span>
+      </h2>
+      <p id="written-paragraph" class="written-paragraph" style="height:100%">
+        Anagram has partnered with coffee shops across NYC to provide founders and community leaders with free locations and venues for hosting meetups. Please fill out the application below to be paired with a space in Manhattan.<form id="submission-form" class="application-form" method="POST" target="iframe"
+        action="https://script.google.com/macros/s/AKfycbz6pNVBRjwfSXR7YxK449Jm3UWqOqWg8dNoL0db0efzV9XvbTKX6JQCvQusDea-ZFme/exec">
+        <div style = "display: flex; align-items: center; justify-content: center;">
+          <input id="name-input" name="URL" type="text" placeholder="Startup URL" required>
+          <input id="email-input" name="Number" type="text" placeholder="Phone Number" required>
+          <input id="occupation-input" name="Event" type="text" placeholder="What will you host?" required>
+        </div>
+        <button id="submit-application-button" class="submit-application" type="submit">Submit Application</button>
+      </form>
+      <iframe name="iframe" style="position: absolute; visibility: hidden"></iframe>
+      <br>
+      <br>
+      </p>
+    </div>
+    <!--<p class="home-page">
+      <a href="../"> Back </a>
+    </p>-->
+  </div>
+</body>
+
+<script>
+  function changePage() {
+    document.getElementById("written-paragraph").innerHTML = "We'll let you know when a space is ready to use!"
+    document.getElementById("submission-form").style.display = "none"
+    document.getElementById("apply-title").innerHTML = "SUBMITTED"
+  }
+
+  function applicationsubmitted() {
+    var ddl = document.getElementById("Referral");
+    var selectedValue = ddl.options[ddl.selectedIndex].value;
+    var ddl1 = document.getElementById("role-input");
+    var selectedValue1 = ddl1.options[ddl1.selectedIndex].value;
+      document.getElementById("apply-title").innerHTML = "SUBMITTING..."
+      document.getElementById("submission-form").style.opacity = "0"
+      document.getElementById("written-paragraph").innerHTML = ""
+      setTimeout(changePage, 3000)
+  }
+  window.onload = document.getElementById("submit-application-button").addEventListener("click", applicationsubmitted);
+</script>
