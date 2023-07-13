@@ -51,7 +51,6 @@
     display: block;
   }
 
-
   @media (max-device-width: 600px) {
     input {
       color: #919191;
@@ -100,6 +99,11 @@
       text-align: center;
       display: block;
     }
+
+    .opt-in-checkbox {
+      height: 30px;
+      width: 30px;
+    }
   }
 </style>
 
@@ -147,7 +151,8 @@
         </select>
         <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
           <div>
-            <input style="outline: 0px solid rgb(208, 208, 208); padding: 0;" type="checkbox" id="mail" name="Mail" value="Sign Up" checked>
+            <input style="outline: 0px solid rgb(208, 208, 208); padding: 0;" class="opt-in-checkbox" type="checkbox"
+              id="mail" name="Mail" value="Sign Up" checked>
             <label for="Mail" class="written-paragraph">Subscribe to our event guest list.</label>
           </div>
         </div>
