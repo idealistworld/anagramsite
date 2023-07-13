@@ -51,6 +51,7 @@
     display: block;
   }
 
+
   @media (max-device-width: 600px) {
     input {
       color: #919191;
@@ -144,7 +145,14 @@
           <option value="Founder">Founder</option>
           <option value="Investor">Investor</option>
         </select>
-        <button id="submit-application-button" class="submit-application" type="submit">Submit Application</button>
+        <div style="width: 100%; display: flex; align-items: center; justify-content: center; margin: 10px 0;">
+          <div>
+            <input type="checkbox" id="mail" name="Mail" value="Sign Up" checked>
+            <label for="Mail" class="written-paragraph">Subscribe to our event guest list.</label>
+          </div>
+        </div>
+        <button style="display: block;" id="submit-application-button" class="submit-application" type="submit">Submit
+          Application</button>
       </form>
       <iframe name="iframe" style="position: absolute; visibility: hidden"></iframe>
       <br>
